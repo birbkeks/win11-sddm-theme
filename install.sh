@@ -44,12 +44,12 @@ function font() {
 
     sudo wget -P /usr/share/sddm/themes/win11-sddm-theme/fonts/SegoeUI-VF https://aka.ms/SegoeUIVariable -nc  
 
-    sudo bsdtar xf /usr/share/sddm/themes/win11-sddm-theme/fonts/SegoeUI-VF.zip -C /usr/share/sddm/themes/win11-sddm-theme/fonts/SegoeUI-VF
+    sudo bsdtar xf /usr/share/sddm/themes/win11-sddm-theme/fonts/SegoeUI-VF/SegoeUIVariable -C /usr/share/sddm/themes/win11-sddm-theme/fonts/SegoeUI-VF
     
 
     sudo wget -P /usr/share/sddm/themes/win11-sddm-theme/fonts/Segoe-Fluent-Icons https://aka.ms/SegoeFluentIcons -nc
 
-    sudo bsdtar xf /usr/share/sddm/themes/win11-sddm-theme/fonts/Segoe-Fluent-Icons.zip -C /usr/share/sddm/themes/win11-sddm-theme/fonts/Segoe-Fluent-Icons
+    sudo bsdtar xf /usr/share/sddm/themes/win11-sddm-theme/fonts/Segoe-Fluent-Icons/SegoeFluentIcons -C /usr/share/sddm/themes/win11-sddm-theme/fonts/Segoe-Fluent-Icons
 
     sudo mv '/usr/share/sddm/themes/win11-sddm-theme/fonts/Segoe-Fluent-Icons/Segoe Fluent Icons.ttf' /usr/share/sddm/themes/win11-sddm-theme/fonts/Segoe-Fluent-Icons/Segoe-Fluent-Icons.ttf
 }
