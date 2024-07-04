@@ -16,14 +16,15 @@
 
 <details>
   <summary>Click to view screenshots</summary>
+   
+![win11-gallery1](https://github.com/birbkeks/win11-sddm-theme/assets/67545942/0bc55a63-8720-42b8-b024-0376d84d1588)
+   
+![win11-gallery2](https://github.com/birbkeks/win11-sddm-theme/assets/67545942/dd7c8ea3-f866-447e-ab29-72dbc18d8c1e)
 
-![win11-sddm-gallery1](https://github.com/birbkeks/win11-sddm-theme/assets/)
+![win11-gallery3](https://github.com/birbkeks/win11-sddm-theme/assets/67545942/de64f895-ab51-4769-82fe-623dff9a528f)
 
-![win11-sddm-gallery2](https://github.com/birbkeks/win11-sddm-theme/assets/)
+![win11-gallery4](https://github.com/birbkeks/win11-sddm-theme/assets/67545942/4c943e42-46d5-4283-b360-4eb21c4b91dd)
 
-![win11-sddm-gallery3](https://github.com/birbkeks/win11-sddm-theme/assets/)
-
-![win11-sddm-gallery4](https://github.com/birbkeks/win11-sddm-theme/assets/)
 
 </details>
 
@@ -63,12 +64,12 @@ chmod +x install.sh
 3. Click on "Get New..." and search for this theme, and install it from there.
 
 ### Manual installation on KDE Plasma desktop environment:
-1- You can download this theme from [github releases](https://github.com/birbkeks/win11-sddm-theme/releases) or from [store.kde.org](https://store.kde.org/p/2170777) page! <br>
+1- You can download this theme from [github releases](https://github.com/birbkeks/win11-sddm-theme/releases) or from [store.kde.org](https://store.kde.org/p/2173243) page! <br>
 2- Extract "win11-sddm-theme.tar.gz" to `/usr/share/sddm/themes`. <br>
 3- Edit /etc/sddm.conf.d/kde_settings.conf  and under `[Theme]`, change `Current=` to `Current=win11-sddm-theme`.
 
 ### If you're not using KDE Plasma:
-1- You can download this theme from [github releases](https://github.com/birbkeks/win11-sddm-theme/releases) or from [store.kde.org](https://store.kde.org/p/2170777) page! <br>
+1- You can download this theme from [github releases](https://github.com/birbkeks/win11-sddm-theme/releases) or from [store.kde.org](https://store.kde.org/p/2173243) page! <br>
 2- Extract "win11-sddm-theme.tar.gz" to `/usr/share/sddm/themes`. <br>
 3- Edit /etc/sddm.conf  and under `[Theme]`, change `Current=` to `Current=win11-sddm-theme`.
 
