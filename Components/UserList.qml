@@ -36,7 +36,7 @@ Rectangle {
             when: container.focus
             PropertyChanges {
                 target: container
-                color: config.Color
+                color: config.color
             }
         },
         State {

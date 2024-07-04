@@ -13,7 +13,7 @@ TextField {
     property alias text: passwordFieldPin.text
 
     echoMode: TextInput.Password ? TextInput.Password : TextInput.Normal
-    selectionColor: config.Color
+    selectionColor: config.color
 
     font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeui.name
     font.pointSize: 10.5
@@ -55,7 +55,7 @@ TextField {
     Rectangle {
         id: passFieldBackground2
         visible: false
-        border.color: config.Color
+        border.color: config.color
         border.width: 2
         width: 292
         height: parent.height
@@ -67,7 +67,7 @@ TextField {
         visible: false
         x: -4
         y: 33
-        color: config.Color
+        color: config.color
         width: 294
         radius: 6
         height: 2

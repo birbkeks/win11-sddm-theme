@@ -44,7 +44,7 @@ Item {
                     when: layoutEntry.focus
                     PropertyChanges {
                         target: layoutEntryBackground
-                        color: config.Color
+                        color: config.color
                     }
                 },
 
@@ -67,7 +67,7 @@ Item {
 
                 onReleased: {
                     if (layoutEntry.focus) {
-                        layoutEntryBackground.color = config.Color
+                        layoutEntryBackground.color = config.color
                     }
                     else {
                         layoutEntryBackground.color = "#1E1E1E"

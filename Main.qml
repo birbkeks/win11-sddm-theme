@@ -33,7 +33,7 @@ Item {
             anchors.fill: parent
             width: parent.width
             height: parent.height
-            source: config.Background
+            source: config.background
 
             Rectangle {
                 width: parent.width
@@ -55,7 +55,7 @@ Item {
             width: Screen.width
             height: Screen.height
             smooth: true
-            source: config.Background
+            source: config.background
 
             Rectangle {
                 id: backRect

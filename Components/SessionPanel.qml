@@ -131,8 +131,8 @@ Item {
                     when: sessionEntry.focus
                     PropertyChanges {
                         target: sessionLeverBackground
-                        color: config.Color
-                        border.color: config.Color
+                        color: config.color
+                        border.color: config.color
                     }
                     PropertyChanges {
                         target: rightblackLever

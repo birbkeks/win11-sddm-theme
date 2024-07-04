@@ -31,7 +31,7 @@ Button {
             when: loginButton.down
             PropertyChanges {
                 target: loginbuttonBackground
-                color: config.Color
+                color: config.color
                 width: 32
                 height: 26
                 x: -1
@@ -48,7 +48,7 @@ Button {
             when: loginButton.hovered
             PropertyChanges {
                 target: loginbuttonBackground
-                color: config.Color
+                color: config.color
             }
             PropertyChanges {
                 target: loginText
