@@ -77,8 +77,9 @@ FocusScope {
     Text {
         id: name
         color: "white"
-        font.pointSize: 40
-        font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeui.name
+        font.pointSize: 27
+        font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeuib.name
+        font.weight: Font.DemiBold
         renderType: Text.NativeRendering
 
         anchors {
@@ -100,68 +101,8 @@ FocusScope {
             top: name.bottom
         }
 
-        onTextChanged: {
-            if (passwordField.text !== "") {
-                passwordField.width = 226
-                loginButton.x = passwordField.width + loginButton.width + 1
-                revealButton.x = passwordField.width
-                revealButton.visible = true
-            }
-
-            else {
-                passwordField.width = 258
-                revealButton.visible = false
-            }
-        }
-
         Keys.onReturnPressed: sddm.login(model.name, password, session)
         Keys.onEnterPressed: sddm.login(model.name, password, session)
-
-        LoginBg {
-            id: loginBg
-
-            x: -3
-
-            LoginButton {
-                id: loginButton
-                visible: true
-
-                ToolTip {
-                    id: loginButtonTip
-
-                    delay: 1000
-                    timeout: 4800
-                    leftPadding: 9
-                    rightPadding: 9
-                    topPadding: 7
-                    bottomPadding: 7
-                    visible: loginButton.hovered
-
-                    contentItem: Text {
-                        text: "Submit"
-                        font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeui.name
-                        renderType: Text.NativeRendering
-                        color: "white"
-                    }
-
-                    background: Rectangle {
-                        color: "#2A2A2A"
-                        border.width: 1
-                        border.color: "#1A1A1A"
-                    }
-                }
-
-                onClicked: {
-                    sddm.login(model.name, password, session)
-                    loginButtonTip.hide()
-                }
-            }
-
-            RevealButton {
-                id: revealButton
-                visible: false
-            }
-        }
     }
 
     PasswordFieldPin {
@@ -180,34 +121,6 @@ FocusScope {
         anchors {
             topMargin: 25
             top: name.bottom
-        }
-
-        onTextChanged: {
-            if (passwordFieldPin.text !== "") {
-                passwordFieldPin.width = 257
-                revealButtonPin.x = passwordFieldPin.width
-                revealButtonPin.visible = true
-            }
-
-            else {
-                passwordFieldPin.width = 289
-                revealButtonPin.visible = false
-            }
-
-            if (passwordFieldPin.length > 3 ) {
-                sddm.login(model.name, passwordpin, session)
-            }
-        }
-
-        LoginBg {
-            id: loginBgPin
-
-            x: -3
-
-            RevealButton {
-                id: revealButtonPin
-                visible: false
-            }
         }
     }
 

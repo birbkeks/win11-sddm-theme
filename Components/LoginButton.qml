@@ -4,22 +4,25 @@ import QtQuick.Controls 2.15
 Button {
     id: loginButton
     hoverEnabled: true
-    width: 31
-    height: 32
-    x: passwordField.width
+    width: 30
+    height: 24
 
     Text {
-    color: "white"
-    text: String.fromCodePoint(0xebe7)
-    font.family:  Qt.resolvedUrl("../fonts") ? "Segoe Fluent Icons" : iconfont.name
-    font.pointSize: 13
-    renderType: Text.NativeRendering
-    anchors.centerIn: parent
+        id: loginText
+        color: "white"
+        text: String.fromCodePoint(0xebe7)
+        font.family:  Qt.resolvedUrl("../fonts") ? "Segoe Fluent Icons" : iconfont.name
+        font.pointSize: 11
+        renderType: Text.NativeRendering
+        anchors.centerIn: parent
     }
 
     background: Rectangle {
         id: loginbuttonBackground
-        color: "#35FFFFFF"
+        width: parent.width
+        height: parent.height
+        color: "transparent"
+        radius: 4
     }
 
     states: [
@@ -28,7 +31,28 @@ Button {
             when: loginButton.down
             PropertyChanges {
                 target: loginbuttonBackground
-                color: "#75FFFFFF"
+                color: config.Color
+                width: 32
+                height: 26
+                x: -1
+                y: -1
+            }
+            PropertyChanges {
+                target: loginText
+                color: "black"
+            }
+        },
+
+        State {
+            name: "hovered"
+            when: loginButton.hovered
+            PropertyChanges {
+                target: loginbuttonBackground
+                color: config.Color
+            }
+            PropertyChanges {
+                target: loginText
+                color: "black"
             }
         }
     ]

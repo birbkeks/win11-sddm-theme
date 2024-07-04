@@ -1,5 +1,6 @@
-import QtQuick 2.15
+import QtQuick 6.7
 import QtQuick.Controls 2.15
+import Qt5Compat.GraphicalEffects
 
 TextField {
     id: passwordField
@@ -7,6 +8,7 @@ TextField {
     visible: true
     selectByMouse: true
     placeholderText: "Password"
+    placeholderTextColor: "white"
 
     property alias text: passwordField.text
 
@@ -14,22 +16,117 @@ TextField {
     selectionColor: config.Color
 
     font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeui.name
-    font.pointSize: 10.9
+    font.pointSize: 10.5
     renderType: Text.NativeRendering
 
-    color: "black"
+    color: "white"
 
-    x: 3
+    onTextChanged: {
+        if (passwordField.text !== "") {
+            passwordField.width = 225
+            revealButton.visible = true
+        }
+
+        else {
+            passwordField.width = 296
+            revealButton.visible = false
+        }
+    }
 
     horizontalAlignment: TextInput.AlignLeft
-    width: 258
-    height: 32
+    width: 296
+    height: 36
 
     background: Rectangle {
         id: passFieldBackground
-        color: "white"
-        x: -3
-        width: parent.width
+        visible: true
+        color: "#BF1C1C1C"
+        border.color: "#15FFFFFF"
+        border.width: 2
+        x: -5
+        width: 296
         height: parent.height
+        radius: 6
+    }
+
+    Rectangle {
+        id: passFieldBackground2
+        visible: false
+        border.color: config.Color
+        border.width: 2
+        width: 292
+        height: parent.height
+        radius: 6
+    }
+
+    Rectangle {
+        id: passField2
+        visible: false
+        x: -4
+        y: 33
+        color: config.Color
+        width: 294
+        radius: 6
+        height: 2
+    }
+
+    OpacityMask {
+        anchors.fill: passField2
+        source: passField2
+        maskSource: passFieldBackground2
+    }
+
+    LoginButton {
+        id: loginButton
+        visible: true
+
+        y: 6
+
+        anchors {
+            right: passFieldBackground.right
+            rightMargin: 6
+        }
+
+        ToolTip {
+            id: loginButtonTip
+
+            delay: 1000
+            timeout: 4800
+            leftPadding: 9
+            rightPadding: 9
+            topPadding: 7
+            bottomPadding: 7
+            visible: loginButton.hovered
+
+            contentItem: Text {
+                text: "Submit"
+                font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeui.name
+                renderType: Text.NativeRendering
+                color: "white"
+            }
+
+            background: Rectangle {
+                color: "#2A2A2A"
+                border.width: 1
+                border.color: "#1A1A1A"
+            }
+        }
+
+        onClicked: {
+            sddm.login(model.name, password, session)
+            loginButtonTip.hide()
+            passwordField.focus = true
+        }
+    }
+
+    RevealButton {
+        id: revealButton
+        visible: false
+        y: 7
+
+        anchors {
+            right: loginButton.left
+            rightMargin: 4
+        }
     }
 }

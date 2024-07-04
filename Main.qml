@@ -10,17 +10,17 @@ Item {
 
     FontLoader {
         id: segoeui
-        source: Qt.resolvedUrl("../fonts/SegoeUI-VF/Segoe-UI-Variable-Static-Display.ttf")
+        source: Qt.resolvedUrl("fonts/SegoeUI-VF/Segoe-UI-Variable-Static-Display.ttf")
     }
 
     FontLoader {
-        id: segoeuil
-        source: Qt.resolvedUrl("../fonts/SegoeUI-VF/Segoe-UI-Variable-Static-Text-Light.ttf")
+        id: segoeuib
+        source: Qt.resolvedUrl("fonts/SegoeUI-VF/Segoe-UI-Variable-Static-Display-Semibold.ttf")
     }
 
     FontLoader {
         id: iconfont
-        source: Qt.resolvedUrl("../fonts/Segoe-Fluent-Icons/Segoe-Fluent-Icons.ttf")
+        source: Qt.resolvedUrl("fonts/Segoe-Fluent-Icons/Segoe-Fluent-Icons.ttf")
     }
 
     Rectangle {
@@ -61,7 +61,7 @@ Item {
                 id: backRect
                 width: Screen.width
                 height: Screen.height
-                color: "#15000000"
+                color: "#25000000"
             }
         }
 
@@ -153,7 +153,7 @@ Item {
             ColorAnimation {
                 target: backRect
                 properties: "color"
-                from: "#15000000"
+                from: "#25000000"
                 to: "#75000000"
                 duration: 125
             }
@@ -219,9 +219,9 @@ Item {
                     id: time
 
                     color: "white"
-                    font.pointSize: 95
-                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeui.name
-                    font.weight: Font.Bold
+                    font.pointSize: 94
+                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeuib.name
+                    font.weight: Font.DemiBold
                     renderType: Text.NativeRendering
                     text: Qt.formatTime(timeContainer.dateTime, "hh:mm")
 
@@ -245,12 +245,12 @@ Item {
                     id: date
 
                     color: "white"
-                    font.pointSize: 20
-                    font.family: "Segoe UI Variable Static Display"
-                    font.weight: Font.Bold
+                    font.pointSize: 19
+                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeuib.name
+                    font.weight: Font.DemiBold
                     renderType: Text.NativeRendering
                     horizontalAlignment: Text.AlignLeft
-                    text: Qt.formatDate(timeContainer.dateTime, "dddd, MMMM dd")
+                    text: Qt.formatDate(timeContainer.dateTime, "dddd, d MMMM")
 
                     anchors {
                         horizontalCenter: parent.horizontalCenter
@@ -280,6 +280,7 @@ Item {
 
             anchors {
                 right: powerPanel.left
+                rightMargin: 5
             }
         }
 
@@ -288,6 +289,7 @@ Item {
 
             anchors {
                 right: sessionPanel.left
+                rightMargin: 5
             }
         }
     }

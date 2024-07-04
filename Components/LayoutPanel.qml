@@ -133,6 +133,7 @@ Item {
         background: Rectangle {
             id: layoutButtonBackground
             color: "transparent"
+            radius: 5
         }
 
         states: [

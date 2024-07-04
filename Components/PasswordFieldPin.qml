@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import Qt5Compat.GraphicalEffects
 
 TextField {
     id: passwordFieldPin
@@ -7,6 +8,7 @@ TextField {
     visible: true
     selectByMouse: true
     placeholderText: "PIN"
+    placeholderTextColor: "white"
 
     property alias text: passwordFieldPin.text
 
@@ -14,22 +16,77 @@ TextField {
     selectionColor: config.Color
 
     font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeui.name
-    font.pointSize: 10.9
+    font.pointSize: 10.5
     renderType: Text.NativeRendering
 
-    color: "black"
+    color: "white"
 
-    x: 3
+    onTextChanged: {
+        if (passwordFieldPin.text !== "") {
+            passwordFieldPin.width = 225
+            revealButton.visible = true
+        }
+
+        else {
+            passwordFieldPin.width = 296
+            revealButton.visible = false
+        }
+
+        if (passwordFieldPin.length > 3 ) {
+            sddm.login(model.name, passwordpin, session)
+        }
+    }
 
     horizontalAlignment: TextInput.AlignLeft
-    width: 289
-    height: 32
+    width: 296
+    height: 36
 
     background: Rectangle {
         id: passFieldBackgroundPin
-        color: "white"
-        x: -3
-        width: parent.width
+        color: "#BF1C1C1C"
+        border.color: "#15FFFFFF"
+        border.width: 2
+        x: -5
+        width: 296
         height: parent.height
+        radius: 6
+    }
+
+    Rectangle {
+        id: passFieldBackground2
+        visible: false
+        border.color: config.Color
+        border.width: 2
+        width: 292
+        height: parent.height
+        radius: 6
+    }
+
+    Rectangle {
+        id: passField2
+        visible: false
+        x: -4
+        y: 33
+        color: config.Color
+        width: 294
+        radius: 6
+        height: 2
+    }
+
+    OpacityMask {
+        anchors.fill: passField2
+        source: passField2
+        maskSource: passFieldBackground2
+    }
+
+    RevealButton {
+        id: revealButton
+        visible: false
+        y: 7
+
+        anchors {
+            right: passFieldBackgroundPin.right
+            rightMargin: 7
+        }
     }
 }

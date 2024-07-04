@@ -13,7 +13,7 @@ Item {
             font.family:  Qt.resolvedUrl("../fonts") ? "Segoe Fluent Icons" : iconfont.name
             text: String.fromCodePoint(0xe7e8)
             renderType: Text.NativeRendering
-            font.pointSize: powerButton.height / 3
+            font.pointSize: 16
             anchors.centerIn: powerButton
         }
 
@@ -88,38 +88,36 @@ Item {
 
     Popup {
         id: powerPopup
-        width: 125
-        height: poweroffButton.height + rebootButton.height + sleepButton.height + 10
-        x: Math.round((powerButton.width - width) / 2) - 13
-        y: -117
+        width: 133
+        height: poweroffButton.height + rebootButton.height + sleepButton.height + 40
+        x: Math.round((powerButton.width - width) / 2) - 17
+        y: -135
         z: 3
-        topPadding: 5
-        bottomPadding: 5
-        leftPadding: 1
-        rightPadding: 1
+        topPadding: 10
+
         background: Rectangle {
             color: "#2B2E2C"
+            border.color: "#E6121212"
             border.width: 1
-            border.color: "black"
             radius: 5
         }
 
         Button {
             id: poweroffButton
-            width: parent.width
-            height: 34
+            width: 115
+            height: 30
             hoverEnabled: true
 
             background: Rectangle {
                 id: poweroffButtonBackground
                 color: "transparent"
-                width: poweroffButton.width - 10
-                height: poweroffButton.height - 5
                 radius: 5
+                width: parent.width
+                height: parent.height
 
                 anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    verticalCenter: parent.verticalCenter
+                    right: parent.right
+                    rightMargin: -5
                 }
             }
 
@@ -150,11 +148,11 @@ Item {
 
             Text {
                 id: powerText
-                text: "Shut Down"
+                text: "Shut down"
                 color: "white"
 
                 font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeui.name
-                font.pointSize: 10
+                font.pointSize: 10.5
                 leftPadding: 10
                 renderType: Text.NativeRendering
 
@@ -171,6 +169,7 @@ Item {
                 text: String.fromCodePoint(0xe7e8)
                 renderType: Text.NativeRendering
                 font.pointSize: 11
+                font.weight: Font.Bold
 
                 anchors {
                     right: poweroffButton.left
@@ -196,27 +195,23 @@ Item {
 
         Button {
             id: rebootButton
-            width: parent.width
-            height: 34
+            width: 115
+            height: 30
             hoverEnabled: true
 
             anchors {
-                horizontalCenter: poweroffButton.horizontalCenter
+                topMargin: 10
                 top: poweroffButton.bottom
-                leftMargin: 5
+                right: parent.right
+                rightMargin: 2
             }
 
             background: Rectangle {
                 id: rebootButtonBackground
                 color: "transparent"
                 radius: 5
-                width: rebootButton.width - 10
-                height: rebootButton.height - 5
-
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    verticalCenter: parent.verticalCenter
-                }
+                width: parent.width
+                height: parent.height
             }
 
             ToolTip {
@@ -251,7 +246,7 @@ again."             // I had to make it like this, so it's normal, don't touch.
                 color: "white"
 
                 font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeui.name
-                font.pointSize: 10
+                font.pointSize: 10.5
                 leftPadding: 10
                 renderType: Text.NativeRendering
 
@@ -268,15 +263,14 @@ again."             // I had to make it like this, so it's normal, don't touch.
                 text: String.fromCodePoint(0xe777)
                 renderType: Text.NativeRendering
                 font.pointSize: 11
+                font.weight: Font.Bold
 
                 anchors {
                     right: rebootButton.left
-                    rightMargin: -30
+                    rightMargin: -25
                     verticalCenter: rebootButton.verticalCenter
                 }
             }
-
-
 
             states: [
                 State {
@@ -294,22 +288,23 @@ again."             // I had to make it like this, so it's normal, don't touch.
 
         Button {
             id: sleepButton
-            width: parent.width
-            height: 34
+            width: 115
+            height: 30
             hoverEnabled: true
 
             anchors {
-                horizontalCenter: rebootButton.horizontalCenter
+                topMargin: 10
                 top: rebootButton.bottom
-                leftMargin: 5
+                right: parent.right
+                rightMargin: 2
             }
 
             background: Rectangle {
                 id: sleepButtonBackground
                 color: "transparent"
-                width: sleepButton.width - 10
-                height: sleepButton.height - 5
                 radius: 5
+                width: parent.width
+                height: parent.height
 
                 anchors {
                     horizontalCenter: parent.horizontalCenter
@@ -350,7 +345,7 @@ you left off."      // Again, it had to be like this, don't touch.
                 color: "white"
 
                 font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeui.name
-                font.pointSize: 10
+                font.pointSize: 10.5
                 leftPadding: 10
                 renderType: Text.NativeRendering
 
@@ -367,11 +362,12 @@ you left off."      // Again, it had to be like this, don't touch.
                 text: String.fromCodePoint(0xe708)
                 renderType: Text.NativeRendering
                 font.pointSize: 11
+                font.weight: Font.Bold
 
                 anchors {
                     right: sleepButton.left
-                    rightMargin: -30
-                    verticalCenter: parent.verticalCenter
+                    rightMargin: -25
+                    verticalCenter: sleepButton.verticalCenter
                 }
             }
 

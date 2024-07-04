@@ -17,6 +17,7 @@ Item {
             highlighted: sessionList.currentIndex == index
             contentItem: Text {
                 renderType: Text.NativeRendering
+                font.weight: Font.Normal
                 font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeui.name
                 font.pointSize: 10
                 verticalAlignment: Text.AlignVCenter
@@ -170,7 +171,7 @@ Item {
             font.family: Qt.resolvedUrl("../fonts") ? "Segoe Fluent Icons" : iconfont.name
             text: String.fromCodePoint(0xe776)
             renderType: Text.NativeRendering
-            font.pointSize: sessionButton.height / 3
+            font.pointSize: 16
             anchors.centerIn: sessionButton
         }
 
@@ -255,8 +256,8 @@ Item {
         background: Rectangle {
             color: "#2C2C2C"
             border.width: 1
-            border.color: "black"
-            radius: 5
+            border.color: "#111111"
+            radius: 4
 
             Button  {
                 id: screenKeyboard
@@ -302,11 +303,11 @@ Item {
 
         contentItem: ListView {
             id: sessionList
-            implicitHeight: contentHeight + 10
+            implicitHeight: contentHeight + 11
             model: sessionWrapper
             currentIndex: sessionModel.lastIndex
             clip: true
-            spacing: 25
+            spacing: 23
             interactive: false
         }
 
