@@ -5,7 +5,6 @@ echo ""
 echo " (1) - Install Windows 11 SDDM Theme"
 echo " (2) - Install Required Segoe UI fonts"
 echo " (3) - Install Windows Cursor Icons"
-echo " (4) - Change default user icon"
 
 echo ""
 
@@ -68,16 +67,6 @@ function cursor() {
     sudo rm -f /usr/share/icons/windows-cursors.tar.gz
 }
 
-function user() {
-
-    sudo wget -P /usr/share/sddm/faces/ https://raw.githubusercontent.com/birbkeks/win11-sddm-theme/main/user-192.png -nc
-
-    sudo rm -rf /usr/share/sddm/faces/.face.icon
-
-    sudo mv /usr/share/sddm/faces/user-192.png /usr/share/sddm/faces/.face.icon
-
-}
-
 if [[ $input == "1" ]]; then
 
     echo ""
@@ -108,16 +97,6 @@ elif [[ $input == "3" ]]; then
 
     echo "Done."
 
-elif [[ $input == "4" ]]; then
-
-    echo ""
-    echo "Change default user icon..."
-    echo ""
-
-    user
-
-    echo "Done..."
-
 
 elif [[ $input == "1 2" ]]; then
 
@@ -142,19 +121,6 @@ elif [[ $input == "1 2 3" ]]; then
 
     echo "Done."
 
-elif [[ $input == "1 2 3 4" ]]; then
-
-    echo ""
-    echo "Install Windows Cursor Icons, Required Segoe UI fonts, Windows Cursor Icons and Change default user icon..."
-    echo ""
-
-    sddm
-    font
-    cursor
-    user
-
-    echo "Done."
-
 elif [[ $input == "2 3" ]]; then
 
     echo ""
@@ -163,29 +129,6 @@ elif [[ $input == "2 3" ]]; then
 
     font
     cursor
-
-    echo "Done."
-
-elif [[ $input == "2 3 4" ]]; then
-
-    echo ""
-    echo "Required Segoe UI fonts, Windows Cursor Icons and Change default user icon..."
-    echo ""
-
-    font
-    cursor
-    user
-
-    echo "Done."
-
-elif [[ $input == "3 4" ]]; then
-
-    echo ""
-    echo "Windows Cursor Icons and Change default user icon..."
-    echo ""
-
-    cursor
-    user
 
     echo "Done."
 

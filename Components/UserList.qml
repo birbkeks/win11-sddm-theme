@@ -59,6 +59,13 @@ Rectangle {
             smooth: true
             visible: false
 
+            onStatusChanged: {
+                if (icon.status == Image.Error)
+                    icon.source = "../user-192.png"
+                else
+                    "/var/lib/AccountsService/icons/" + name
+            }
+
             x: 12
             y: 5
         }

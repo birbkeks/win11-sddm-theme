@@ -112,8 +112,8 @@ Item {
                 target: timeDate
                 properties: "y"
                 from: 0
-                to: -45
-                duration: 125
+                to: -100
+                duration: 150
             }
 
             NumberAnimation {
@@ -121,7 +121,7 @@ Item {
                 properties: "visible"
                 from: 1
                 to: 0
-                duration: 125
+                duration: 175
             }
 
             NumberAnimation {
@@ -129,7 +129,7 @@ Item {
                 properties: "opacity"
                 from: 1
                 to: 0
-                duration: 100
+                duration: 180
             }
         }
 
@@ -310,7 +310,7 @@ Item {
             UserList {
                 id: userList
                 name: (model.realName === "") ? model.name : model.realName
-                icon: model.icon
+                icon: "/var/lib/AccountsService/icons/" + name
 
                 anchors {
                     horizontalCenter: parent.horizontalCenter
@@ -409,7 +409,7 @@ Item {
                 UserPanel {
                     anchors.centerIn: parent
                     name: (model.realName === "") ? model.name : model.realName
-                    icon: model.icon
+                    icon: "/var/lib/AccountsService/icons/" + name
                 }
             }
 

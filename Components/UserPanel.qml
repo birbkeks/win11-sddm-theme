@@ -49,6 +49,13 @@ FocusScope {
         smooth: true
         visible: false
 
+        onStatusChanged: {
+            if (icon.status == Image.Error)
+                icon.source = "../user-192.png"
+            else
+                "/var/lib/AccountsService/icons/" + name
+        }
+
         x: -(icon.width / 2)
         y: -(icon.width * 2) + (icon.width * 0.8)
     }
