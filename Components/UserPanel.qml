@@ -19,6 +19,7 @@ FocusScope {
       target: sddm
 
         function onLoginFailed() {
+            truePass.visible = false
 
             passwordField.visible = false
             passwordField.enabled = false
