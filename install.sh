@@ -29,11 +29,19 @@ function edit() {
 
     if [[ $XDG_CURRENT_DESKTOP == "KDE" ]]; then
 
-    sudo sed -i 's/Current=/Current=win11-sddm-theme/' /etc/sddm.conf.d/kde_settings.conf
+    sudo sed -i '/Current=/d' /etc/sddm.conf.d/kde_settings.conf
+
+    sudo sed -i '/Theme]/a\
+Current=win11-sddm-theme
+' /etc/sddm.conf.d/kde_settings.conf
 
     else
 
-    sudo sed -i 's/Current=/Current=win11-sddm-theme/' /etc/sddm.conf
+    sudo sed -i '/Current=/d' /etc/sddm.conf
+
+    sudo sed -i '/Theme]/a\
+Current=win11-sddm-theme
+' /etc/sddm.conf
 
     fi
 }
