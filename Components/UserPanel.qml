@@ -28,18 +28,14 @@ FocusScope {
             passwordFieldPin.enabled = false
             passwordFieldPin.focus = false
 
+            rightPanel.visible = false
+            leftPanel.visible = false
+
             falsePass.visible = true
             falsePass.focus = true
         }
 
-        function onLoginSucceeded() {
-
-            passwordField.visible = false
-
-            passwordFieldPin.visible = false
-
-            truePass.visible = true
-        }
+        function onLoginSucceeded() {}
     }
 
     Image {
@@ -85,7 +81,7 @@ FocusScope {
         id: name
         color: "white"
         font.pointSize: 27
-        font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeuib.name
+        font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeuisb.name
         font.weight: Font.DemiBold
         renderType: Text.NativeRendering
 
@@ -108,8 +104,23 @@ FocusScope {
             top: name.bottom
         }
 
-        Keys.onReturnPressed: sddm.login(model.name, password, session)
-        Keys.onEnterPressed: sddm.login(model.name, password, session)
+        Keys.onReturnPressed: {
+            truePass.visible = true
+            passwordField.visible = false
+            passwordFieldPin.visible = false
+            rightPanel.visible = false
+            leftPanel.visible = false
+            sddm.login(model.name, password, session)
+        }
+
+        Keys.onEnterPressed: {
+            truePass.visible = true
+            passwordField.visible = false
+            passwordFieldPin.visible = false
+            rightPanel.visible = false
+            leftPanel.visible = false
+            sddm.login(model.name, password, session)
+        }
     }
 
     PasswordFieldPin {
@@ -142,14 +153,28 @@ FocusScope {
         }
     }
 
-    TruePass {
+    Rectangle {
         id: truePass
+        x: 1
+        y: 1
+        color: "transparent"
         visible: false
 
         anchors {
             horizontalCenter: parent.horizontalCenter
             topMargin: 25
             top: name.bottom
+        }
+
+        Text {
+            id: welcome
+            color: "white"
+            font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeuisb.name
+            text: "Welcome"
+            renderType: Text.NativeRendering
+            font.weight: Font.DemiBold
+            font.pointSize: 17
+            anchors.centerIn: parent
         }
     }
 
@@ -178,9 +203,8 @@ FocusScope {
         ]
 
         anchors {
-            horizontalCenter: parent.horizontalCenter
-            topMargin: 25
             top: passwordField.bottom
+            topMargin: 25
         }
     }
 }

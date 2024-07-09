@@ -117,6 +117,9 @@ FocusScope {
                 passwordFieldPin.enabled = config.PinMode === "off" ? false : true
                 passwordFieldPin.focus = config.PinMode === "off" ? false : true
 
+                leftPanel.visible = true
+                rightPanel.visible = true
+
                 passwordField.text = ""
 
                 passwordFieldPin.text = ""
@@ -133,6 +136,9 @@ FocusScope {
                 passwordFieldPin.enabled = config.PinMode === "off" ? false : true
                 passwordFieldPin.focus = config.PinMode === "off" ? false : true
 
+                leftPanel.visible = true
+                rightPanel.visible = true
+
                 passwordField.text = ""
 
                 passwordFieldPin.text = ""
@@ -148,6 +154,9 @@ FocusScope {
                 passwordFieldPin.visible = config.PinMode === "off" ? false : true
                 passwordFieldPin.enabled = config.PinMode === "off" ? false : true
                 passwordFieldPin.focus = config.PinMode === "off" ? false : true
+
+                leftPanel.visible = true
+                rightPanel.visible = true
 
                 passwordField.text = ""
 

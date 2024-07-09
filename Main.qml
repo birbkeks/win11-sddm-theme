@@ -14,7 +14,7 @@ Item {
     }
 
     FontLoader {
-        id: segoeuib
+        id: segoeuisb
         source: Qt.resolvedUrl("fonts/SegoeUI-VF/Segoe-UI-Variable-Static-Display-Semibold.ttf")
     }
 
@@ -220,7 +220,7 @@ Item {
 
                     color: "white"
                     font.pointSize: 94
-                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeuib.name
+                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeuisb.name
                     font.weight: Font.DemiBold
                     renderType: Text.NativeRendering
                     text: Qt.formatTime(timeContainer.dateTime, "hh:mm")
@@ -246,7 +246,7 @@ Item {
 
                     color: "white"
                     font.pointSize: 19
-                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeuib.name
+                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeuisb.name
                     font.weight: Font.DemiBold
                     renderType: Text.NativeRendering
                     horizontalAlignment: Text.AlignLeft
