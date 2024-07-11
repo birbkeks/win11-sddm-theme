@@ -113,9 +113,13 @@ TextField {
         }
 
         onClicked: {
+            truePass.visible = true
+            passwordField.visible = false
+            passwordFieldPin.visible = false
+            rightPanel.visible = false
+            leftPanel.visible = false
             sddm.login(model.name, password, session)
             loginButtonTip.hide()
-            passwordField.focus = true
         }
     }
 
