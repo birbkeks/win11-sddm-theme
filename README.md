@@ -17,14 +17,11 @@
 <details>
   <summary>Click to view screenshots</summary>
    
-![win11-gallery1](https://github.com/birbkeks/win11-sddm-theme/assets/67545942/0bc55a63-8720-42b8-b024-0376d84d1588)
-   
-![win11-gallery2](https://github.com/birbkeks/win11-sddm-theme/assets/67545942/dd7c8ea3-f866-447e-ab29-72dbc18d8c1e)
-
-![win11-gallery3](https://github.com/birbkeks/win11-sddm-theme/assets/67545942/de64f895-ab51-4769-82fe-623dff9a528f)
-
-![win11-gallery4](https://github.com/birbkeks/win11-sddm-theme/assets/67545942/4c943e42-46d5-4283-b360-4eb21c4b91dd)
-
+![win11-sddm-gallery1](https://github.com/user-attachments/assets/b56e9b3b-249a-4bb0-8a42-4d29f2c45f42)
+![win11-sddm-gallery2](https://github.com/user-attachments/assets/03fc5fc1-442a-42ff-8224-fe66c7e437ca)
+![win11-sddm-gallery3](https://github.com/user-attachments/assets/272895f4-0f67-43d7-992e-95cf676a2ebb)
+![win11-sddm-gallery4](https://github.com/user-attachments/assets/3ece6da2-15d1-485b-9557-a57c759cd8db)
+![win11-sddm-gallery5](https://github.com/user-attachments/assets/d335876a-f3e8-4f7e-92e7-a206b39758ce)
 
 </details>
 
