@@ -162,8 +162,8 @@ Item {
 
     Button {
         id: sessionButton
-        height: 50
-        width: 50
+        width: 40
+        height: sessionButton.width
         hoverEnabled: true
 
         Text {
@@ -248,7 +248,7 @@ Item {
         id: sessionPopup
         width: 250
         x: Math.round((parent.width - width) + 70)
-        y: Math.round(-sessionButton.height -(sessionPopup.height) + 45)
+        y: Math.round(-sessionButton.height -(sessionPopup.height) + 35)
         z: 3
 
         topPadding: 10

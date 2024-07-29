@@ -4,8 +4,8 @@ import QtQuick.Controls 2.15
 Item {
     Button {
         id: powerButton
-        height: 50
-        width: 50
+        width: 40
+        height: powerButton.width
         hoverEnabled: true
 
         Text {
@@ -90,7 +90,7 @@ Item {
         id: powerPopup
         width: 133
         height: poweroffButton.height + rebootButton.height + sleepButton.height + 40
-        x: Math.round((powerButton.width - width) / 2) - 17
+        x: Math.round((powerButton.width - width) / 2) - 22
         y: -135
         z: 3
         topPadding: 10

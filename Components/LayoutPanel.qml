@@ -85,8 +85,8 @@ Item {
 
     Button {
         id: layoutButton
-        height: 50
-        width: 50
+        width: 40
+        height: layoutButton.width
         hoverEnabled: true
 
         Text {
@@ -174,7 +174,7 @@ Item {
         id: layoutPopup
         width: 121
         x: Math.round((parent.width - width) / 2)
-        y: Math.round(-layoutButton.height -(layoutPopup.height) + 45)
+        y: Math.round(-layoutButton.height -(layoutPopup.height) + 35)
         topPadding: 5
         bottomPadding: 5
         leftPadding: 0

@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 2.15
+import Qt5Compat.GraphicalEffects
 import "Components"
 
 Item {
@@ -30,16 +31,25 @@ Item {
         height: parent.height
 
         Image {
+            id: bgimg
             anchors.fill: parent
             width: parent.width
             height: parent.height
             source: config.background
+            visible: false
 
             Rectangle {
                 width: parent.width
                 height: parent.height
                 color: "#75000000"
             }
+        }
+
+        GaussianBlur {
+            anchors.fill: bgimg
+            source: bgimg
+            radius: 50
+            samples: 50
         }
     }
 
@@ -268,7 +278,7 @@ Item {
         anchors {
             bottom: parent.bottom
             right: parent.right
-            margins: 75
+            margins: 65
         }
 
         PowerPanel {
@@ -280,7 +290,7 @@ Item {
 
             anchors {
                 right: powerPanel.left
-                rightMargin: 5
+                rightMargin: 10
             }
         }
 
@@ -289,7 +299,7 @@ Item {
 
             anchors {
                 right: sessionPanel.left
-                rightMargin: 5
+                rightMargin: 10
             }
         }
     }

@@ -42,6 +42,7 @@ FocusScope {
             color: "#35FFFFFF"
             border.color: "#35FFFFFF"
             border.width: 2
+            radius: 3
         }
 
         states: [
@@ -85,6 +86,7 @@ FocusScope {
                 color: "transparent"
                 border.color: "black"
                 border.width: 1
+                radius: 3
             }
         }
 
@@ -104,6 +106,7 @@ FocusScope {
                 color: "transparent"
                 border.color: "white"
                 border.width: 2
+                radius: 6
             }
 
             onClicked: {
@@ -117,7 +120,7 @@ FocusScope {
                 passwordFieldPin.enabled = config.PinMode === "off" ? false : true
                 passwordFieldPin.focus = config.PinMode === "off" ? false : true
 
-                leftPanel.visible = true
+                leftPanel.visible = listView2.count > 1 ? true : false
                 rightPanel.visible = true
 
                 passwordField.text = ""
@@ -136,7 +139,7 @@ FocusScope {
                 passwordFieldPin.enabled = config.PinMode === "off" ? false : true
                 passwordFieldPin.focus = config.PinMode === "off" ? false : true
 
-                leftPanel.visible = true
+                leftPanel.visible = listView2.count > 1 ? true : false
                 rightPanel.visible = true
 
                 passwordField.text = ""
@@ -155,7 +158,7 @@ FocusScope {
                 passwordFieldPin.enabled = config.PinMode === "off" ? false : true
                 passwordFieldPin.focus = config.PinMode === "off" ? false : true
 
-                leftPanel.visible = true
+                leftPanel.visible = listView2.count > 1 ? true : false
                 rightPanel.visible = true
 
                 passwordField.text = ""
