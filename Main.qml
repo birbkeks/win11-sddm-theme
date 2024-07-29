@@ -266,6 +266,76 @@ Item {
                         horizontalCenter: parent.horizontalCenter
                     }
                 }
+
+                Text {
+                    id: warning
+                    visible: segoeui.status === FontLoader.Error ? true : false
+
+                    color: "white"
+                    font.pointSize: 19
+                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeuisb.name
+                    font.weight: Font.DemiBold
+                    renderType: Text.NativeRendering
+                    horizontalAlignment: Text.AlignLeft
+                    text: "Please install the required fonts!"
+                    topPadding: 75
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                    }
+                }
+
+                Text {
+                    id: warning2
+                    visible: warning.visible ? true : false
+
+                    color: "white"
+                    font.pointSize: 19
+                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeuisb.name
+                    font.weight: Font.DemiBold
+                    renderType: Text.NativeRendering
+                    horizontalAlignment: Text.AlignLeft
+                    text: "Check the Github repo from 'https://github.com/birbkeks/win11-sddm-theme' "
+                    topPadding: 50
+
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                    }
+                }
+
+                Text {
+                    id: warning3
+                    visible: warning.visible ? true : false
+
+                    color: "white"
+                    font.pointSize: 19
+                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeuisb.name
+                    font.weight: Font.DemiBold
+                    renderType: Text.NativeRendering
+                    horizontalAlignment: Text.AlignLeft
+                    text: "or run '/usr/share/sddm/themes/win11-sddm-theme/install.sh' in your terminal!"
+
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                    }
+                }
+
+                Text {
+                    id: warning4
+                    visible: warning.visible ? true : false
+
+                    color: "white"
+                    font.pointSize: 19
+                    font.family: Qt.resolvedUrl("../fonts") ? "Segoe UI Variable Static Display" : segoeuisb.name
+                    font.weight: Font.DemiBold
+                    renderType: Text.NativeRendering
+                    horizontalAlignment: Text.AlignLeft
+                    text: "I can't include those fonts in my project because of legal issues with Microsoft!"
+                    topPadding: 50
+
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                    }
+                }
             }
         }
     }
