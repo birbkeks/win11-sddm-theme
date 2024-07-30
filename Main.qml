@@ -37,12 +37,6 @@ Item {
             height: parent.height
             source: config.background
             visible: false
-
-            Rectangle {
-                width: parent.width
-                height: parent.height
-                color: "#75000000"
-            }
         }
 
         GaussianBlur {
@@ -66,13 +60,6 @@ Item {
             height: Screen.height
             smooth: true
             source: config.background
-
-            Rectangle {
-                id: backRect
-                width: Screen.width
-                height: Screen.height
-                color: "#25000000"
-            }
         }
 
         MouseArea {
@@ -159,14 +146,6 @@ Item {
         SequentialAnimation {
             id: seqStart
             running: false
-
-            ColorAnimation {
-                target: backRect
-                properties: "color"
-                from: "#25000000"
-                to: "#75000000"
-                duration: 125
-            }
 
             ParallelAnimation {
 

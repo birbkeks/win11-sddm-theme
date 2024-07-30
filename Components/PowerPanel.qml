@@ -13,7 +13,7 @@ Item {
             font.family:  Qt.resolvedUrl("../fonts") ? "Segoe Fluent Icons" : iconfont.name
             text: String.fromCodePoint(0xe7e8)
             renderType: Text.NativeRendering
-            font.pointSize: 16
+            font.pointSize: 13
             anchors.centerIn: powerButton
         }
 
@@ -96,7 +96,7 @@ Item {
         topPadding: 10
 
         background: Rectangle {
-            color: "#2B2E2C"
+            color: "#D12B2E2C"
             border.color: "#E6121212"
             border.width: 1
             radius: 5

@@ -40,8 +40,8 @@ TextField {
     background: Rectangle {
         id: passFieldBackground
         visible: true
-        color: "#BF1C1C1C"
-        border.color: "#15FFFFFF"
+        color: "#B31C1C1C"
+        border.color: "#25FFFFFF"
         border.width: 2
         x: -5
         width: 296

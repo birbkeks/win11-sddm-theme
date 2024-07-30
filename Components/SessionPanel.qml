@@ -171,7 +171,7 @@ Item {
             font.family: Qt.resolvedUrl("../fonts") ? "Segoe Fluent Icons" : iconfont.name
             text: String.fromCodePoint(0xe776)
             renderType: Text.NativeRendering
-            font.pointSize: 16
+            font.pointSize: 13
             anchors.centerIn: sessionButton
         }
 

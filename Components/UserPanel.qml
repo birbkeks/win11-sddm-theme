@@ -176,6 +176,8 @@ FocusScope {
             font.weight: Font.DemiBold
             font.pointSize: 17
             anchors.centerIn: parent
+
+            topPadding: 50
         }
     }
 
