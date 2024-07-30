@@ -16,12 +16,12 @@
 
 <details>
   <summary>Click to view screenshots</summary>
-   
-![win11-sddm-gallery1](https://github.com/user-attachments/assets/b56e9b3b-249a-4bb0-8a42-4d29f2c45f42)
-![win11-sddm-gallery2](https://github.com/user-attachments/assets/03fc5fc1-442a-42ff-8224-fe66c7e437ca)
-![win11-sddm-gallery3](https://github.com/user-attachments/assets/272895f4-0f67-43d7-992e-95cf676a2ebb)
-![win11-sddm-gallery4](https://github.com/user-attachments/assets/3ece6da2-15d1-485b-9557-a57c759cd8db)
-![win11-sddm-gallery5](https://github.com/user-attachments/assets/d335876a-f3e8-4f7e-92e7-a206b39758ce)
+
+![win11-sddm-gallery1](https://github.com/user-attachments/assets/0b2d20d3-db8c-4644-943d-c12bdc5d53dc)
+![win11-sddm-gallery2](https://github.com/user-attachments/assets/6759005a-9f2e-4f74-8f29-8a58cf9b01ae)
+![win11-sddm-gallery3](https://github.com/user-attachments/assets/edb68c75-1c74-41bf-8d74-e87741a7e248)
+![win11-sddm-gallery4](https://github.com/user-attachments/assets/bd49ed47-30dc-4ccd-b2da-caeacbac355a)
+![win11-sddm-gallery5](https://github.com/user-attachments/assets/a58ef416-50f4-4ee6-b679-0cad6d7cab2f)
 
 </details>
 
