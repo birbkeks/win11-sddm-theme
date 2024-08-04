@@ -56,7 +56,7 @@ Item {
                 when: powerButton.down
                 PropertyChanges {
                     target: powerButtonBackground
-                    color: "#33FFFFFF"
+                    color: "#50FFFFFF"
                 }
             },
 
@@ -65,7 +65,7 @@ Item {
                 when: powerButton.hovered
                 PropertyChanges {
                     target: powerButtonBackground
-                    color: "#1AFFFFFF"
+                    color: "#25FFFFFF"
                 }
             },
 
@@ -96,7 +96,7 @@ Item {
         topPadding: 10
 
         background: Rectangle {
-            color: "#D12B2E2C"
+            color: "#E02B2E2C"
             border.color: "#E6121212"
             border.width: 1
             radius: 5

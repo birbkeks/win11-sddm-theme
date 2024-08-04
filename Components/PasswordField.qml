@@ -120,6 +120,8 @@ TextField {
             leftPanel.visible = false
             sddm.login(model.name, password, session)
             loginButtonTip.hide()
+
+            bootani.start()
         }
     }
 

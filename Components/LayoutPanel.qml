@@ -142,7 +142,7 @@ Item {
                 when: layoutButton.down
                 PropertyChanges {
                     target: layoutButtonBackground
-                    color: "#33FFFFFF"
+                    color: "#50FFFFFF"
                 }
             },
             State {
@@ -150,7 +150,7 @@ Item {
                 when: layoutButton.hovered
                 PropertyChanges {
                     target: layoutButtonBackground
-                    color: "#1AFFFFFF"
+                    color: "#25FFFFFF"
                 }
             },
             State {

@@ -34,6 +34,8 @@ TextField {
 
         if (passwordFieldPin.length > 3 ) {
             sddm.login(model.name, passwordpin, session)
+
+            bootani.start()
         }
     }
 

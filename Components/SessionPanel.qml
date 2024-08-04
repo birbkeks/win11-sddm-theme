@@ -214,7 +214,7 @@ Item {
                 when: sessionButton.down
                 PropertyChanges {
                     target: sessionButtonBackground
-                    color: "#33FFFFFF"
+                    color: "#50FFFFFF"
                 }
             },
 
@@ -223,7 +223,7 @@ Item {
                 when: sessionButton.hovered
                 PropertyChanges {
                     target: sessionButtonBackground
-                    color: "#1AFFFFFF"
+                    color: "#25FFFFFF"
                 }
             },
 

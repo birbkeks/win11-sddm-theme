@@ -42,8 +42,15 @@ Item {
         GaussianBlur {
             anchors.fill: bgimg
             source: bgimg
-            radius: 50
+            radius: 60
             samples: 50
+        }
+
+        Rectangle {
+            anchors.fill: parent
+            width: parent.width
+            height: parent.height
+            color: "#1A000000"
         }
     }
 
@@ -60,6 +67,13 @@ Item {
             height: Screen.height
             smooth: true
             source: config.background
+        }
+
+        Rectangle {
+            anchors.fill: parent
+            width: parent.width
+            height: parent.height
+            color: "#1A000000"
         }
 
         MouseArea {
