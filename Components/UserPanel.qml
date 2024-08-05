@@ -162,8 +162,6 @@ FocusScope {
 
     Rectangle {
         id: truePass
-        x: 1
-        y: 1
         color: "transparent"
         visible: false
 

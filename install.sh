@@ -59,6 +59,8 @@ function font() {
     sudo bsdtar xf /usr/share/sddm/themes/win11-sddm-theme/fonts/Segoe-Fluent-Icons/SegoeFluentIcons -C /usr/share/sddm/themes/win11-sddm-theme/fonts/Segoe-Fluent-Icons
 
     sudo mv '/usr/share/sddm/themes/win11-sddm-theme/fonts/Segoe-Fluent-Icons/Segoe Fluent Icons.ttf' /usr/share/sddm/themes/win11-sddm-theme/fonts/Segoe-Fluent-Icons/Segoe-Fluent-Icons.ttf
+
+    sudo wget -P /usr/share/sddm/themes/win10-sddm-theme/fonts https://github.com/Z2r-YT/Fake-Windows-Update-Screen/raw/main/src/font/SegoeBoot-Semilight.woff -nc
 }
 
 function cursor() {
