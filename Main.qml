@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 2.15
 import Qt5Compat.GraphicalEffects
+import QtMultimedia
 import "Components"
 
 Item {
@@ -37,6 +38,13 @@ Item {
             height: parent.height
             source: config.background
             visible: false
+        }
+
+        MediaPlayer {
+            id: startupSound
+            autoPlay: true
+            source: Qt.resolvedUrl("Assets/Startup-Sound.wav")
+            audioOutput: AudioOutput {}
         }
 
         GaussianBlur {

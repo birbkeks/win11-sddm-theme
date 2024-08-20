@@ -50,7 +50,7 @@ FocusScope {
 
         onStatusChanged: {
             if (icon.status == Image.Error)
-                icon.source = "../user-192.png"
+                icon.source = "../Assets/user-192.png"
             else
                 "/var/lib/AccountsService/icons/" + name
         }
