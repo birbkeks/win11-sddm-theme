@@ -49,18 +49,13 @@ Current=win11-sddm-theme
 function font() {
     # Not installed locally because I can't stand to see this font on Github and other websites, I couldn't find a way to disable this font for browser. I'm used to see Noto Sans too much I guess. You can go to this fonts files and install it locally if you want to and this theme will still work.
 
-    sudo wget -P /usr/share/sddm/themes/win11-sddm-theme/fonts/SegoeUI-VF https://aka.ms/SegoeUIVariable -nc  
+    sudo wget -P /usr/share/sddm/themes/win11-sddm-theme/fonts https://github.com/birbkeks/win11-sddm-theme/raw/main/fonts/Segoe-UI-Variable-Static-Display.ttf -nc
 
-    sudo bsdtar xf /usr/share/sddm/themes/win11-sddm-theme/fonts/SegoeUI-VF/SegoeUIVariable -C /usr/share/sddm/themes/win11-sddm-theme/fonts/SegoeUI-VF
-    
+    sudo wget -P /usr/share/sddm/themes/win11-sddm-theme/fonts https://github.com/birbkeks/win11-sddm-theme/raw/main/fonts/Segoe-UI-Variable-Static-Display-Semibold.ttf -nc
 
-    sudo wget -P /usr/share/sddm/themes/win11-sddm-theme/fonts/Segoe-Fluent-Icons https://aka.ms/SegoeFluentIcons -nc
+    sudo wget -P /usr/share/sddm/themes/win11-sddm-theme/fonts https://github.com/birbkeks/win11-sddm-theme/raw/main/fonts/Segoe-Fluent-Icons.ttf -nc
 
-    sudo bsdtar xf /usr/share/sddm/themes/win11-sddm-theme/fonts/Segoe-Fluent-Icons/SegoeFluentIcons -C /usr/share/sddm/themes/win11-sddm-theme/fonts/Segoe-Fluent-Icons
-
-    sudo mv '/usr/share/sddm/themes/win11-sddm-theme/fonts/Segoe-Fluent-Icons/Segoe Fluent Icons.ttf' /usr/share/sddm/themes/win11-sddm-theme/fonts/Segoe-Fluent-Icons/Segoe-Fluent-Icons.ttf
-
-    sudo wget -P /usr/share/sddm/themes/win10-sddm-theme/fonts https://github.com/Z2r-YT/Fake-Windows-Update-Screen/raw/main/src/font/SegoeBoot-Semilight.woff -nc
+    sudo wget -P /usr/share/sddm/themes/win11-sddm-theme/fonts https://github.com/birbkeks/win11-sddm-theme/raw/main/fonts/SegoeBoot-Semilight.woff -nc
 }
 
 function cursor() {
