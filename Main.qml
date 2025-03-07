@@ -400,7 +400,7 @@ Item {
             UserList {
                 id: userList
                 name: (model.realName === "") ? model.name : model.realName
-                icon: "/var/lib/AccountsService/icons/" + name
+                icon: "/var/lib/AccountsService/icons/" + model.name
 
                 anchors {
                     horizontalCenter: parent.horizontalCenter
@@ -499,7 +499,7 @@ Item {
                 UserPanel {
                     anchors.centerIn: parent
                     name: (model.realName === "") ? model.name : model.realName
-                    icon: "/var/lib/AccountsService/icons/" + name
+                    icon: "/var/lib/AccountsService/icons/" + model.name
                 }
             }
 
