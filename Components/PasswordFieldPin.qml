@@ -21,76 +21,7 @@ TextField {
 
     color: "white"
 
-    onTextChanged: {
-        if (passwordFieldPin.text !== "") {
-            passwordFieldPin.width = 225
-            revealButton.visible = true
-        }
-
-        else {
-            passwordFieldPin.width = 296
-            revealButton.visible = false
-        }
-
-        if (passwordFieldPin.length > 3 ) {
-            sddm.login(model.name, passwordpin, session)
-
-            bootani.start()
-
-            capsOn.z = -1
-        }
-    }
-
     horizontalAlignment: TextInput.AlignLeft
     width: 296
     height: 36
-
-    background: Rectangle {
-        id: passFieldBackgroundPin
-        color: "#BF1C1C1C"
-        border.color: "#15FFFFFF"
-        border.width: 2
-        x: -5
-        width: 296
-        height: parent.height
-        radius: 6
-    }
-
-    Rectangle {
-        id: passFieldBackground2
-        visible: false
-        border.color: config.color
-        border.width: 2
-        width: 292
-        height: parent.height
-        radius: 6
-    }
-
-    Rectangle {
-        id: passField2
-        visible: false
-        x: -4
-        y: 33
-        color: config.color
-        width: 294
-        radius: 6
-        height: 2
-    }
-
-    OpacityMask {
-        anchors.fill: passField2
-        source: passField2
-        maskSource: passFieldBackground2
-    }
-
-    RevealButton {
-        id: revealButton
-        visible: false
-        y: 7
-
-        anchors {
-            right: passFieldBackgroundPin.right
-            rightMargin: 7
-        }
-    }
 }

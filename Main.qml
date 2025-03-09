@@ -474,9 +474,91 @@ Item {
 
                         x: -135
 
-                        validator: IntValidator { // this dude allows only numbers to be typed, if something goes wrong, blame this dude.
-                            bottom: 8
-                            top: 1000
+                        property int pinSize: config.PinSize
+
+                        function calculateTopValue(size) {
+                            return parseInt('9'.repeat(size));
+                        }
+
+                        validator: IntValidator {
+                            bottom: 1
+                            top: calculateTopValue(pinSize)
+                        }
+
+                        onTextChanged: {
+                            if (passwordFieldPin.text !== "") {
+                                passwordFieldPin.width = 225
+                                revealButton.visible = true
+                            }
+
+                            else {
+                                passwordFieldPin.width = 296
+                                revealButton.visible = false
+                            }
+
+                            if (config.PinSize == passwordFieldPin.length) {
+                                falsePass.visible = true
+                                passwordField.visible = false
+                                passwordField.enabled = false
+                                passwordFieldPin.visible = false
+                                passwordFieldPin.enabled = false
+                                rightPanel.visible = false
+                                leftPanel.visible = false
+                                sddm.login(model.name, password, session)
+
+                                bootani.start()
+
+                                capsOn.z = -1
+                            }
+                        }
+
+                        RevealButton {
+                            id: revealButton
+                            visible: false
+                            y: 7
+
+                            anchors {
+                                right: passFieldBackgroundPin.right
+                                rightMargin: 7
+                            }
+                        }
+
+                        background: Rectangle {
+                            id: passFieldBackgroundPin
+                            color: "#BF1C1C1C"
+                            border.color: "#15FFFFFF"
+                            border.width: 2
+                            x: -5
+                            width: 296
+                            height: parent.height
+                            radius: 6
+                        }
+
+                        Rectangle {
+                            id: passFieldBackground2
+                            visible: false
+                            border.color: config.color
+                            border.width: 2
+                            width: 292
+                            height: parent.height
+                            radius: 6
+                        }
+
+                        Rectangle {
+                            id: passField2
+                            visible: false
+                            x: -4
+                            y: 33
+                            color: config.color
+                            width: 294
+                            radius: 6
+                            height: 2
+                        }
+
+                        OpacityMask {
+                            anchors.fill: passField2
+                            source: passField2
+                            maskSource: passFieldBackground2
                         }
 
                         anchors {
