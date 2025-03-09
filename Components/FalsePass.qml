@@ -126,6 +126,8 @@ FocusScope {
                 passwordField.text = ""
 
                 passwordFieldPin.text = ""
+
+                capsOn.z = capsOn.state === "on" ? 2 : -1
             }
 
             Keys.onReturnPressed: {
@@ -145,6 +147,8 @@ FocusScope {
                 passwordField.text = ""
 
                 passwordFieldPin.text = ""
+
+                capsOn.z = capsOn.state === "on" ? 2 : -1
             }
 
             Keys.onEnterPressed: {
@@ -164,6 +168,8 @@ FocusScope {
                 passwordField.text = ""
 
                 passwordFieldPin.text = ""
+
+                capsOn.z = capsOn.state === "on" ? 2 : -1
             }
         }
     }

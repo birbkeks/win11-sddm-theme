@@ -115,13 +115,17 @@ TextField {
         onClicked: {
             truePass.visible = true
             passwordField.visible = false
+            passwordField.enabled = false
             passwordFieldPin.visible = false
+            passwordFieldPin.enabled = false
             rightPanel.visible = false
             leftPanel.visible = false
             sddm.login(model.name, password, session)
             loginButtonTip.hide()
 
             bootani.start()
+
+            capsOn.z = -1
         }
     }
 

@@ -36,6 +36,8 @@ TextField {
             sddm.login(model.name, passwordpin, session)
 
             bootani.start()
+
+            capsOn.z = -1
         }
     }
 
